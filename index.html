@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Приглашение на 1 годик</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(180deg,#eaf6ff,#ffffff);
+color:#333;
+overflow-x:hidden;
+}
+
+header{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:30px;
+position:relative;
+}
+
+.one{
+width:120px;
+height:120px;
+margin:0 auto 25px;
+border-radius:50%;
+background:linear-gradient(135deg,#ffe07d,#d8a100);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:60px;
+font-weight:bold;
+color:#fff;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.bear{
+font-size:70px;
+margin-bottom:20px;
+animation:jump 3s infinite;
+}
+
+@keyframes jump{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+}
+
+h1{
+font-size:48px;
+color:#5d8fd8;
+margin-bottom:15px;
+}
+
+h2{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.date,.place{
+font-size:22px;
+line-height:1.7;
+color:#666;
+}
+
+.hero{
+width:320px;
+max-width:90%;
+margin:35px 0;
+border-radius:25px;
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.button{
+display:inline-block;
+margin-top:20px;
+padding:18px 38px;
+background:#83bbff;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-size:22px;
+transition:.3s;
+}
+
+.button:hover{
+transform:scale(1.05);
+}
+
+section{
+padding:80px 25px;
+text-align:center;
+}
+
+.card{
+max-width:900px;
+margin:auto;
+background:white;
+border-radius:30px;
+padding:40px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}.card{
+background:white;
+border-radius:30px;
+padding:40px;
+max-width:900px;
+margin:auto;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.cloud{
+position:fixed;
+width:180px;
+height:60px;
+background:white;
+border-radius:100px;
+opacity:.45;
+filter:blur(2px);
+animation:cloudMove 45s linear infinite;
+z-index:-1;
+}
+
+.cloud:before{
+content:"";
+position:absolute;
+width:70px;
+height:70px;
+background:white;
+border-radius:50%;
+left:20px;
+top:-25px;
+}
+
+.cloud:after{
+content:"";
+position:absolute;
+width:90px;
+height:90px;
+background:white;
+border-radius:50%;
+right:20px;
+top:-40px;
+}
+
+.c1{
+top:10%;
+left:-220px;
+}
+
+.c2{
+top:35%;
+left:-320px;
+animation-duration:60s;
+}
+
+.c3{
+top:65%;
+left:-250px;
+animation-duration:75s;
+}
+
+@keyframes cloudMove{
+from{
+transform:translateX(0);
+}
+to{
+transform:translateX(1800px);
+}
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-12px);
+}
+}
+
+.bear{
+font-size:72px;
+animation:float 3s ease-in-out infinite;
+margin:20px 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="cloud c1"></div>
+<div class="cloud c2"></div>
+<div class="cloud c3"></div>
+
+<header>
+
+<div class="one">1</div>
+
+<div class="bear">🧸</div>
+
+<h1>Нам 1 год!</h1>
+
+<h2>Ақалмас Карим Жалғасұлы</h2>
+
+<p style="font-size:22px;color:#666;line-height:1.8;">
+12 сентября 2026<br>
+12:00
+</p>
+
+<p style="font-size:22px;color:#666;margin-top:15px;">
+Ресторан «Алмаз»<br>
+ул. Тургенева, 40Б<br>
+г. Актобе
+</p>
+
+<img src="photo2.png" class="hero">
+
+<a href="#invite" class="button">
+Открыть приглашение
+</a>
+
+</header><section id="invite">
+
+<div class="card">
+
+<h2>Дорогие родные и друзья!</h2>
+
+<p style="margin-top:25px;">
+
+Мы с огромной радостью приглашаем вас разделить с нами
+самый первый День рождения нашего любимого сына —
+
+<strong>Ақалмас Карим Жалғасұлы</strong>.
+
+<br><br>
+
+Будем счастливы видеть вас рядом в этот особенный день!
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>📅 Дата и место</h2>
+
+<p style="margin-top:25px;">
+
+<b>12 сентября 2026 года</b>
+
+<br><br>
+
+🕛 12:00
+
+<br><br>
+
+📍 Ресторан «Алмаз»
+
+<br>
+
+ул. Тургенева, 40Б
+
+<br>
+
+г. Актобе
+
+</p>
+
+<br><br>
+
+<a
+class="button"
+target="_blank"
+href="https://maps.google.com/?q=Ресторан+Алмаз+Тургенева+40Б+Актобе">
+
+Построить маршрут
+
+</a>
+
+</div>
+
+</section><section id="timer">
+  <div class="card">
+    <h2>⏳ До нашей встречи осталось</h2>
+
+    <div id="countdown" style="font-size:32px;font-weight:bold;margin-top:30px;color:#5d8fd8;">
+      Загрузка...
+    </div>
+
+  </div>
+</section>
+
+<section id="family">
+  <div class="card">
+
+    <h2>💙 С нетерпением ждём всех в этот день!</h2>
+
+    <p style="margin-top:25px;">
+      📅 <b>12 сентября 2026</b><br><br>
+
+      🕛 12:00<br><br>
+
+      📍 Ресторан «Алмаз»<br>
+      ул. Тургенева, 40Б<br>
+      г. Актобе
+    </p>
+
+    <p style="margin-top:35px;font-size:22px;">
+      ❤️ Ждут вас:
+    </p>
+
+    <p style="line-height:2;">
+      👨 Жалгас<br>
+      👩 Динара<br>
+      👨 Азат<br>
+      👵 Шнара
+    </p>
+
+  </div>
+</section>
+
+<script>
+
+const target = new Date("2026-09<section id="timer">
+  <div class="card">
+    <h2>⏳ До нашей встречи осталось</h2>
+
+    <div id="countdown" style="font-size:32px;font-weight:bold;margin-top:30px;color:#5d8fd8;">
+      Загрузка...
+    </div>
+
+  </div>
+</section>
+
+<section id="family">
+  <div class="card">
+
+    <h2>💙 С нетерпением ждём всех в этот день!</h2>
+
+    <p style="margin-top:25px;">
+      📅 <b>12 сентября 2026</b><br><br>
+
+      🕛 12:00<br><br>
+
+      📍 Ресторан «Алмаз»<br>
+      ул. Тургенева, 40Б<br>
+      г. Актобе
+    </p>
+
+    <p style="margin-top:35px;font-size:22px;">
+      ❤️ Ждут вас:
+    </p>
+
+    <p style="line-height:2;">
+      👨 Жалгас<br>
+      👩 Динара<br>
+      👨 Азат<br>
+      👵 Шнара
+    </p>
+
+  </div>
+</section>
+
+<script>
+
+const target = new Date("2026-09-12T12:00:00");
+
+function updateTimer(){
+
+const now = new Date();
+
+const diff = target - now;
+
+if(diff<=0){
+
+document.getElementById("countdown").innerHTML="🎉 Мы вас ждём!";
+
+return;
+
+}
+
+const days=Math.floor(diff/1000/60/60/24);
+
+const hours=Math.floor(diff/1000/60/60)%24;
+
+const minutes=Math.floor(diff/1000/60)%60;
+
+const seconds=Math.floor(diff/1000)%60;
+
+document.getElementById("countdown").innerHTML=
+
+days+" д. "+hours+" ч. "+minutes+" мин. "+seconds+" сек.";
+
+}
+
+setInterval(updateTimer,1000);
+
+updateTimer();
+
+</script>
+
+</body>
+</html>

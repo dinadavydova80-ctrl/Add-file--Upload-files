@@ -85,20 +85,25 @@ pointer-events:none;
 <div class="cloud"></div>
 
 <header>
-
 <div style="font-size:70px;">👑</div>
 
-<h1>🎈 Нам 1 год! 🎈</h1>
+<div class="top">
+    <div class="one">1</div>
 
-<h2>Ақалмас Карим Жалғасұлы</h2>
+    <h1>Нам 1 год!</h1>
 
-<p>
-12 сентября 2026 • 12:00
-<br><br>
-Ресторан «Алмаз»
-<br>
-ул. Тургенева, 40Б
-</p>
+    <h2>Ақалмас Карим Жалғасұлы</h2>
+
+    <p class="date">
+        12 сентября 2026 • 12:00
+    </p>
+
+    <p class="place">
+        Ресторан «Алмаз»<br>
+        ул. Тургенева, 40Б
+    </p>
+</div>
+
 
 <img src="photo2.png" class="hero">
 
@@ -112,15 +117,42 @@ pointer-events:none;
 
 <h2>Дорогие родные и друзья!</h2>
 
-<p style="max-width:700px;margin:auto;margin-top:25px;line-height:1.8">
+.top{
+    text-align:center;
+    padding:30px;
+}
 
-Мы с огромной радостью приглашаем вас разделить с нами самый первый День рождения нашего любимого сына.
+.one{
+    width:90px;
+    height:90px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#f9d976,#f39f18);
+    color:white;
+    font-size:50px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
 
-Будем счастливы видеть вас рядом в этот особенный день!
+h1{
+    font-size:42px;
+    color:#5b84c4;
+}
 
-</p>
+h2{
+    font-size:32px;
+    margin-top:15px;
+}
 
-</section>
+.date{
+    font-size:24px;
+    color:#666;
+}
 
-</body>
-</html>
+.place{
+    font-size:22px;
+    color:#666;
+}

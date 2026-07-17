@@ -5,17 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Приглашение</title>
-
-<style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(#dff2ff,#ffffff);
+font-family:Arial,sans-serif;
+background:linear-gradient(180deg,#dff4ff,#ffffff,#eef9ff);
+color:#333;
 overflow-x:hidden;
 }
 
@@ -27,60 +30,103 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:25px;
-background:linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.6));
+position:relative;
+}
+
+header::before{
+content:"";
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at 20% 20%,rgba(255,255,255,.7),transparent 40%),
+radial-gradient(circle at 80% 30%,rgba(255,255,255,.6),transparent 35%);
+z-index:-1;
+}
+
+.one{
+width:110px;
+height:110px;
+border-radius:50%;
+background:linear-gradient(135deg,#ffd86b,#dca100);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:56px;
+font-weight:bold;
+color:white;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+margin-bottom:25px;
 }
 
 h1{
-font-size:42px;
-color:#5f84b7;
-margin-top:15px;
+font-size:44px;
+color:#5b8ed9;
+margin-bottom:12px;
 }
 
 h2{
-margin-top:10px;
-font-size:28px;
-color:#333;
+font-size:30px;
+margin-bottom:15px;
+}
+
+.date,.place{
+font-size:22px;
+color:#666;
+line-height:1.6;
+}
+
+.hero{
+width:300px;
+max-width:90%;
+border-radius:25px;
+margin:35px 0;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.button{
+display:inline-block;
+padding:16px 35px;
+background:#79b8ff;
+color:#fff;
+text-decoration:none;
+border-radius:50px;
+font-size:20px;
+transition:.3s;
+}
+
+.button:hover{
+transform:scale(1.05);
+}
+
+section{
+padding:70px 25px;
+text-align:center;
 }
 
 p{
 font-size:20px;
-margin-top:15px;
-color:#555;
+line-height:1.8;
+max-width:750px;
+margin:auto;
 }
 
-.hero{
-width:280px;
-border-radius:25px;
-box-shadow:0 10px 35px rgba(0,0,0,.2);
-margin-top:30px;
+.card{
+background:white;
+border-radius:30px;
+padding:40px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+max-width:900px;
+margin:auto;
 }
-
-.button{
-margin-top:35px;
-display:inline-block;
-padding:16px 34px;
-background:#8dbdf5;
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-size:20px;
-}
-
-.cloud{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:url("https://www.transparenttextures.com/patterns/clouds.png");
-opacity:.15;
-pointer-events:none;
-}
-</style>
 
 </head>
 
 <body>
+<div class="sky">
+  <div class="cloud c1"></div>
+  <div class="cloud c2"></div>
+  <div class="cloud c3"></div>
+</div>
 
 <div class="cloud"></div>
 
@@ -106,6 +152,7 @@ pointer-events:none;
 
 
 <img src="photo2.png" class="hero">
+<div class="bear">🧸</div>
 
 <a href="#invite" class="button">
 Открыть приглашение
@@ -113,46 +160,114 @@ pointer-events:none;
 
 </header>
 
-<section id="invite" style="padding:60px 30px;text-align:center;background:white">
+<section id="invite">
+
+<div class="card">
 
 <h2>Дорогие родные и друзья!</h2>
 
-.top{
-    text-align:center;
-    padding:30px;
+<p>
+
+Мы с огромной радостью приглашаем вас разделить с нами самый первый и самый важный праздник в жизни нашего любимого сына —
+
+<strong>Ақалмас Карим Жалғасұлы.</strong>
+
+<br><br>
+
+Будем счастливы видеть вас рядом в этот особенный день!
+
+</p>
+
+</div>
+
+.sky{
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+overflow:hidden;
+pointer-events:none;
+z-index:-2;
 }
 
-.one{
-    width:90px;
-    height:90px;
-    margin:0 auto 20px;
-    border-radius:50%;
-    background:linear-gradient(135deg,#f9d976,#f39f18);
-    color:white;
-    font-size:50px;
-    font-weight:bold;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 8px 25px rgba(0,0,0,.2);
+.cloud{
+position:absolute;
+width:220px;
+height:70px;
+background:white;
+border-radius:100px;
+opacity:.35;
+filter:blur(2px);
+animation:moveCloud 45s linear infinite;
 }
 
-h1{
-    font-size:42px;
-    color:#5b84c4;
+.cloud:before,
+.cloud:after{
+content:"";
+position:absolute;
+background:white;
+border-radius:50%;
 }
 
-h2{
-    font-size:32px;
-    margin-top:15px;
+.cloud:before{
+width:80px;
+height:80px;
+left:25px;
+top:-35px;
 }
 
-.date{
-    font-size:24px;
-    color:#666;
+.cloud:after{
+width:100px;
+height:100px;
+right:30px;
+top:-50px;
 }
 
-.place{
-    font-size:22px;
-    color:#666;
+.c1{
+top:12%;
+left:-250px;
 }
+
+.c2{
+top:38%;
+left:-350px;
+animation-duration:60s;
+}
+
+.c3{
+top:65%;
+left:-300px;
+animation-duration:75s;
+}
+
+@keyframes moveCloud{
+
+from{
+transform:translateX(0);
+}
+
+to{
+transform:translateX(1600px);
+}
+
+}
+
+.bear{
+font-size:70px;
+margin-top:20px;
+animation:jump 3s infinite;
+}
+
+@keyframes jump{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+}
+</section>
